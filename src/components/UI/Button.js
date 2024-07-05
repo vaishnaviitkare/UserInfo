@@ -3,7 +3,8 @@ import "./Button.css";
 const Button=(props)=>{
 return(
 <div>
-    <button type={props.type}  className="button">{props.children}</button>
+    {/*here we give "button" as or type if type is not mentioned then default type is button*/}
+    <button type={props.type || "button"}  className="button" onClick={props.onClick}>{props.children}</button>
 </div>
 );
 }
